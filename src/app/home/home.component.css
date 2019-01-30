@@ -1,0 +1,36 @@
+#blah {
+    float: right
+}
+
+#header {
+    font-weight: bold;
+    font-size: large;
+}
+
+
+
+#response {
+    color: gold;
+}
+
+.frame {
+
+    border: 1px solid ivory;
+    color: firebrick;
+    font-size: 100%;
+}
+.background
+{
+    background-image:url( "../../assets/homebg.jpeg");
+    background-size: cover;
+}
+
+.col-lg-6 {
+    margin: auto;
+    
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.5);
+
+}

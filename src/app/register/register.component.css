@@ -1,0 +1,22 @@
+.background {
+
+    background-image: url("../../assets/clientbg.jpg");
+    background-size: cover;
+}
+
+.frame {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid brown;
+    color: firebrick;
+    font-size: 100%;
+
+
+}
+
+#demo {
+    color: red;
+}
+
+.col-lg-4 {
+    margin: auto
+}

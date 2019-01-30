@@ -1,0 +1,64 @@
+<div class="background">
+    <div class="col-lg-6">
+        <div class="card">
+            <img id="blah" src={{imageUrl}} height = "150" width = "100">
+            <div class="card-body">
+                <form name="my_form" id="my">
+                    <div class="frame">
+
+                        <h1 align="center">
+                            Account Details
+                        </h1>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="no." value={{userData.name}} class="form-control" #name required autocomplete="off" />
+                        </div>
+                        <span [hidden]="nameFlag" class="name" style="color:red;">name not valid</span>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" name="no." #address value={{userData.address}} class="form-control" required autocomplete="off" />
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="user">Username</label>
+                            <input type="text" name="no." #user value={{userData.username}} class="form-control" required autocomplete="off" />
+                        </div>
+                        <div class="form-group">
+                            <label for="pid">Change Password</label>
+                            <input type="password" (change)="checkPassword(pid.value)" placeholder="password" value={{userData.password}} name="psw" #pid class="form-control" required autocomplete="off"
+                            />
+                        </div>
+                        <span [hidden]="passwordFlag" class="pwd" style="color:red;">min. 8 characters(number,alphabet and special char.)</span>
+                        <div class="form-group">
+                            <label for="prid">Retype Password</label>
+                            <input type="password"  placeholder="password" value={{userData.password}} name="psw" #prid class="form-control" required
+                                autocomplete="off" />
+                        </div>
+                        <span [hidden]="matchFlag" class="pwd" id="reso" style="color:red;">The two field's doesn't match</span>
+
+                        <div class="form-group">
+                            <label for="eid">Email</label>
+                            <input type="email" placeholder="email" name="mail" #eid value={{userData.email}} class="form-control" required autocomplete="off"
+                            />
+                        </div>
+                        <span [hidden]="emailFlag" class="mail" style="color:red;">not valid as of now</span>
+                        <div class="form-group">
+                            <label for="phone">Phoneno</label>
+                            <input type="text" name="no." min="11" #phone value={{userData.phone_no}} class="form-control" required autocomplete="off"
+                            />
+                        </div>
+                        <span [hidden]="phoneFlag" class="ph" style="color:red; ">10 digits exactly</span>
+                        <input type="button" (click)="edit(name.value,address.value,user.value,eid.value,pid.value,prid.value,phone.value)" class="btn btn-success"
+                            value="Update" />.
+                        <input type="button" (click)="logout()" class="btn btn-success" value="logout" />
+                        <input type='file' #filechooser (change)="image($event)" />
+                        <span [hidden]="responseFlag" class="name" style="color:red;">Some fields blank</span>
+                        <span  style="color:brown; ">{{response}}</span>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
